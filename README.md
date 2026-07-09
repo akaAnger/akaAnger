@@ -1,10 +1,8 @@
-# Ilia Anikanov
+# Anger
 
-I started building small tools when familiar digital routes began breaking, blocking, or becoming harder to use. At first it was simple: make the thing work, remove friction, keep the interface clear.
+I build small tools for the moments when familiar digital routes become blocked, broken, or too complicated.
 
-That is still the idea behind most of my projects.
-
-My main focus now is **Stena** — a Telegram Mini App for a cleaner way to read Telegram channels. I keep the product details private, but the direction is simple: less noise, better structure, and a feed that feels easier to use.
+Now my main focus is **Stena** — a private Telegram Mini App MVP about cleaner reading, less noise, and better structure.
 
 ## What I build
 
