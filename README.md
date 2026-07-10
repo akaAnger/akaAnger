@@ -162,9 +162,8 @@ GitHub
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=akaAnger&show_icons=true&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=7ee787&text_color=c9d1d9&ring_color=58a6ff" alt="GitHub statistics">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=akaAnger&layout=compact&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&langs_count=8" alt="Most used languages">
+<img width="49%" src="./assets/github-signal.svg" alt="Anger GitHub signal">
+<img width="49%" src="./assets/stack-signal.svg" alt="Anger stack signal">
 
 </div>
 
