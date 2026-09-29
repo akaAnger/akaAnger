@@ -1,0 +1,6 @@
+[
+  {"question": "How long does delivery take?", "keywords": ["shipping", "delivery", "arrival", "time"], "answer": "Standard delivery for this demo store takes 3–5 business days after dispatch."},
+  {"question": "Can I return an order?", "keywords": ["returns", "refund", "exchange", "send back"], "answer": "You can request a return within 14 days of delivery. Contact support with your order number before sending the item back."},
+  {"question": "How do I track my package?", "keywords": ["tracking", "parcel", "package", "shipment"], "answer": "Your dispatch email includes a tracking link. If you did not receive it, ask for a person and share your order number privately."},
+  {"question": "What payment methods are accepted?", "keywords": ["pay", "card", "payments"], "answer": "This is a demo store. No payments are accepted by this bot."}
+]

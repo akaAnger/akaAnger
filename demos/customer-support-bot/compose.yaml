@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - support-data:/app/data
+      - ./knowledge.json:/app/knowledge.json:ro
+volumes:
+  support-data:
