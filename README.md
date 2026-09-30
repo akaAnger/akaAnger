@@ -123,7 +123,23 @@ GitHub
 
 ---
 
-## `04 // STACK`
+## `04 // TELEGRAM & AUTOMATION`
+
+### [Story submission bot](https://t.me/upvote_proposal_bot)
+
+A private Python bot for collecting audience stories, reviewing submissions, handling media albums, and publishing approved posts to [@upvote_media](https://t.me/upvote_media). The production source is not public.
+
+### [Customer support bot demo](./demos/customer-support-bot)
+
+A runnable Python example with editable FAQ answers, SQLite history, operator handoff, and six offline tests. Run `python demo.py` to inspect a fictional conversation without tokens or API calls. This is a portfolio prototype, not a client deployment.
+
+### Stena
+
+A private Node.js MVP for combining posts from selected Telegram channels and grouping likely duplicate stories. It includes a searchable feed, source filters, reading state, and optional cached AI titles. The repository remains private while the product is in development.
+
+---
+
+## `05 // STACK`
 
 <div align="center">
 
@@ -142,7 +158,7 @@ GitHub
 
 ---
 
-## `05 // BUILD PHILOSOPHY`
+## `06 // BUILD PHILOSOPHY`
 
 ```text
 [+] Clear purpose
@@ -158,7 +174,7 @@ GitHub
 
 ---
 
-## `06 // GITHUB SIGNAL`
+## `07 // GITHUB SIGNAL`
 
 <div align="center">
 
