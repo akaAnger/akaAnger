@@ -1,42 +1,101 @@
 <div align="center">
 
-<img src="./assets/anger-terminal.svg" alt="Anger profile terminal banner" width="100%">
+<img src="./assets/anger-terminal.svg" alt="akaAnger control deck" width="100%">
 
 <br>
 
-[![GitHub](https://img.shields.io/badge/GitHub-akaAnger-0d1117?style=for-the-badge&logo=github&logoColor=white)](https://github.com/akaAnger)
-![Location](https://img.shields.io/badge/Tbilisi-Georgia-0d1117?style=for-the-badge&logo=googlemaps&logoColor=58A6FF)
-![Status](https://img.shields.io/badge/Status-Building-0d1117?style=for-the-badge&logo=vercel&logoColor=7EE787)
+`PROGRAMMER` · `BUILDER` · `PRODUCT TINKERER`
+
+**I build small systems that remove unnecessary friction.**
+
+[PROJECTS](#projects) · [STACK](#stack) · [SIGNAL](#signal)
 
 </div>
 
 ---
 
-## `01 // ORIGIN`
-
-I started building small tools when familiar digital routes began breaking, blocking, or becoming harder to use.
-
-The first goal was simple:
+## `BOOT / 00`
 
 ```text
-make it work
-remove friction
-keep it clear
+> user:      akaAnger
+> location:  Tbilisi
+> mode:      BUILDING
+> target:    useful software
+> filter:    signal > noise
+> status:    online_
 ```
 
-That principle still drives most of what I build.
+Most of my projects start the same way: something feels unnecessarily complicated, slow or noisy — so I build a smaller route around it.
 
-I am interested in products that solve a real problem without forcing the user to fight the interface.
+No framework worship. No complexity for decoration. The tool comes first.
 
 ---
 
-## `02 // CURRENT FOCUS`
+## `SYSTEM MAP / 01`
 
-### `STENA`
+<div align="center">
 
-A private Telegram Mini App MVP built around a cleaner way to read Telegram channels.
+<img src="./assets/system-map.svg" alt="akaAnger project system map" width="100%">
 
-The product details stay private, but the direction is simple:
+</div>
+
+---
+
+<a id="projects"></a>
+## `PROJECTS / 02`
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### `PEERCALL`
+
+**Private one-to-one browser audio calls.**
+
+WebRTC + manual one-time connection codes. No accounts, no signaling backend, no vendor lock-in in the core flow.
+
+[`OPEN REPOSITORY →`](https://github.com/akaAnger/peercall)  
+[`LIVE DEMO →`](https://akaanger.github.io/peercall/)
+
+`WebRTC` `PWA` `JavaScript`
+
+</td>
+<td width="50%" valign="top">
+
+### `LRC SYNC PLAYER`
+
+**Terminal audio player with synchronized lyrics.**
+
+A compact Python app for local audio and timestamped `.lrc` lyrics, with readable parsing, CLI controls and automated tests.
+
+[`OPEN REPOSITORY →`](https://github.com/akaAnger/lrc-sync-player)
+
+`Python` `pygame` `Rich` `CLI`
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+### `RETRO'98 MICROGAMES`
+
+**Tiny browser games with old-desktop energy.**
+
+A dependency-free collection of microgames built with plain HTML, CSS and JavaScript in a Windows 98-inspired interface.
+
+[`OPEN REPOSITORY →`](https://github.com/akaAnger/retro98-microgames)
+
+`HTML` `CSS` `Vanilla JS` `Canvas`
+
+</td>
+<td width="50%" valign="top">
+
+### `STENA // PRIVATE`
+
+**Current product work.**
+
+A Telegram Mini App project built around a simple principle:
 
 ```text
 signal  > noise
@@ -44,78 +103,7 @@ order   > clutter
 control > endless scrolling
 ```
 
-The goal is not to create another feed.
-
-The goal is to make the feed easier to use.
-
----
-
-## `03 // SELECTED WORK`
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### [LRC Sync Player](https://github.com/akaAnger/lrc-sync-player)
-
-A terminal audio player with synchronized `.lrc` lyrics.
-
-```text
-Python
-pygame
-Rich
-CLI
-LRC parsing
-```
-
-Built as a compact utility with readable code, tests, packaging and automated checks.
-
-</td>
-<td width="50%" valign="top">
-
-### [Retro'98 Microgames](https://github.com/akaAnger/retro98-microgames)
-
-Small browser games inspired by old desktop interfaces and retro software.
-
-```text
-JavaScript
-HTML / CSS
-Microgames
-Retro UI
-```
-
-A playground for interaction, visual style and compact game mechanics.
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
-### [PeerCall](https://github.com/akaAnger/peercall)
-
-Private browser audio calls built around direct peer-to-peer communication.
-
-```text
-WebRTC
-PWA
-JavaScript
-Communication
-```
-
-</td>
-<td width="50%" valign="top">
-
-### [Profile Source](https://github.com/akaAnger/akaAnger)
-
-The source of this profile and a public index of my work.
-
-```text
-README
-SVG
-Documentation
-GitHub
-```
+`Telegram` `Product` `Automation`
 
 </td>
 </tr>
@@ -123,76 +111,94 @@ GitHub
 
 ---
 
-## `04 // STACK`
+<a id="stack"></a>
+## `STACK / 03`
 
 <div align="center">
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Node.js](https://img.shields.io/badge/Node.js-0d1117?style=for-the-badge&logo=nodedotjs&logoColor=5FA04E)
 ![Python](https://img.shields.io/badge/Python-0d1117?style=for-the-badge&logo=python&logoColor=3776AB)
-![HTML5](https://img.shields.io/badge/HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=E34F26)
-![CSS3](https://img.shields.io/badge/CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=1572B6)
-![Telegram](https://img.shields.io/badge/Telegram_APIs-0d1117?style=for-the-badge&logo=telegram&logoColor=26A5E4)
+![Node.js](https://img.shields.io/badge/Node.js-0d1117?style=for-the-badge&logo=nodedotjs&logoColor=5FA04E)
 ![WebRTC](https://img.shields.io/badge/WebRTC-0d1117?style=for-the-badge&logo=webrtc&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram_APIs-0d1117?style=for-the-badge&logo=telegram&logoColor=26A5E4)
 ![SQLite](https://img.shields.io/badge/SQLite-0d1117?style=for-the-badge&logo=sqlite&logoColor=44A2D4)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0d1117?style=for-the-badge&logo=postgresql&logoColor=4169E1)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-0d1117?style=for-the-badge&logo=githubactions&logoColor=2088FF)
 
 </div>
 
----
-
-## `05 // BUILD PHILOSOPHY`
-
 ```text
-[+] Clear purpose
-[+] Useful automation
-[+] Predictable interfaces
-[+] Readable code
-[+] Small tools that solve real problems
-
-[-] Empty complexity
-[-] Features without purpose
-[-] Noise disguised as functionality
+languages  : JavaScript / Python / HTML / CSS
+browser    : WebRTC / PWA / Canvas / WebAudio
+data       : SQLite / PostgreSQL
+platforms  : Telegram APIs / GitHub Actions
+bias       : small, inspectable, useful
 ```
 
 ---
 
-## `06 // GITHUB SIGNAL`
+## `BUILD RULES / 04`
 
-<div align="center">
+<table>
+<tr>
+<td width="33%" valign="top">
 
-<img width="49%" src="./assets/github-signal.svg" alt="Anger GitHub signal">
-<img width="49%" src="./assets/stack-signal.svg" alt="Anger stack signal">
+### `01`
+**Remove friction**
 
-</div>
+If the user has to fight the interface, the interface is unfinished.
 
-<div align="center">
+</td>
+<td width="33%" valign="top">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=akaAnger&bg_color=0d1117&color=c9d1d9&line=58a6ff&point=7ee787&area=true&hide_border=true" alt="Contribution activity graph">
+### `02`
+**Keep it inspectable**
 
-</div>
+Readable code beats mysterious cleverness when both solve the same problem.
+
+</td>
+<td width="33%" valign="top">
+
+### `03`
+**Ship the useful part**
+
+Start with the smallest version that already earns its place.
+
+</td>
+</tr>
+</table>
 
 ---
 
+<a id="signal"></a>
+## `SIGNAL / 05`
+
+<div align="center">
+
+<img width="49%" src="./assets/github-signal.svg" alt="akaAnger GitHub signal">
+<img width="49%" src="./assets/stack-signal.svg" alt="akaAnger stack signal">
+
+</div>
+
 <details>
-<summary><code>OPEN ORIGIN.LOG</code></summary>
+<summary><code>OPEN /origin.log</code></summary>
 
 <br>
 
 ```text
-> route unavailable
-> familiar tools becoming harder to use
-> unnecessary friction detected
-
-starting builder mode...
-
-> create a workaround
-> turn workaround into a tool
-> turn tool into a product
-> simplify everything possible
-
-status: still building
+route unavailable
+↓
+find the friction
+↓
+build a workaround
+↓
+make the workaround understandable
+↓
+turn it into a tool
+↓
+remove everything the tool does not need
+↓
+ship
 ```
 
 </details>
@@ -202,11 +208,11 @@ status: still building
 <div align="center">
 
 ```text
-NO EMPTY COMMITS.
-NO FAKE COMPLEXITY.
-ONLY USEFUL THINGS.
+MAKE IT WORK.
+MAKE IT CLEAR.
+REMOVE THE NOISE.
 ```
 
-### `Less noise. Better structure.`
+**`akaAnger // still building`**
 
 </div>
