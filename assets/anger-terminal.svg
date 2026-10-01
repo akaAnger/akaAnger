@@ -1,61 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
-  <title id="title">Anger developer profile terminal</title>
-  <desc id="desc">Dark terminal-style developer banner for akaAnger.</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">akaAnger control deck</title>
+  <desc id="desc">Dark developer identity banner for akaAnger with a terminal control deck aesthetic.</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#080b12"/>
-      <stop offset="55%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#111827"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070b"/>
+      <stop offset="52%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#101826"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#58a6ff"/>
       <stop offset="100%" stop-color="#7ee787"/>
     </linearGradient>
     <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
-  <rect width="1200" height="420" rx="24" fill="url(#background)"/>
-  <rect x="1" y="1" width="1198" height="418" rx="23" fill="none" stroke="#30363d" stroke-width="2"/>
+  <rect width="1200" height="390" rx="24" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="388" rx="23" fill="none" stroke="#30363d" stroke-width="2"/>
 
-  <rect x="0" y="0" width="1200" height="54" rx="24" fill="#161b22"/>
-  <rect x="0" y="30" width="1200" height="24" fill="#161b22"/>
-  <circle cx="30" cy="27" r="7" fill="#ff7b72"/>
-  <circle cx="54" cy="27" r="7" fill="#d29922"/>
-  <circle cx="78" cy="27" r="7" fill="#7ee787"/>
-  <text x="110" y="34" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="17">~/akaAnger/profile</text>
+  <g opacity=".08" stroke="#c9d1d9">
+    <path d="M0 78H1200M0 156H1200M0 234H1200M0 312H1200"/>
+    <path d="M150 0V390M300 0V390M450 0V390M600 0V390M750 0V390M900 0V390M1050 0V390"/>
+  </g>
 
-  <text x="58" y="113" fill="#7ee787" font-family="Consolas, Menlo, monospace" font-size="21">$ whoami</text>
-  <text x="58" y="166" fill="#f0f6fc" font-family="Consolas, Menlo, monospace" font-size="58" font-weight="700" letter-spacing="4">ANGER</text>
-  <rect x="58" y="181" width="420" height="4" rx="2" fill="url(#accent)" filter="url(#glow)"/>
-  <text x="58" y="224" fill="#c9d1d9" font-family="Consolas, Menlo, monospace" font-size="22">programmer / builder</text>
-  <text x="58" y="262" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="18">building useful things with less noise</text>
+  <text x="48" y="54" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="16">CONTROL DECK / IDENTITY</text>
+  <circle cx="1128" cy="48" r="7" fill="#7ee787" filter="url(#glow)"/>
+  <text x="1107" y="54" text-anchor="end" fill="#7ee787" font-family="Consolas, Menlo, monospace" font-size="15">LIVE</text>
 
-  <rect x="650" y="91" width="490" height="255" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
-  <text x="684" y="130" fill="#58a6ff" font-family="Consolas, Menlo, monospace" font-size="18">SYSTEM.STATUS</text>
-  <line x1="684" y1="146" x2="1105" y2="146" stroke="#21262d" stroke-width="2"/>
+  <text x="56" y="135" fill="#58a6ff" font-family="Consolas, Menlo, monospace" font-size="18">$ ./identify --human</text>
+  <text x="56" y="212" fill="#f0f6fc" font-family="Consolas, Menlo, monospace" font-size="72" font-weight="700" letter-spacing="3">akaANGER</text>
+  <rect x="56" y="232" width="535" height="4" rx="2" fill="url(#accent)" filter="url(#glow)"/>
+  <text x="56" y="276" fill="#c9d1d9" font-family="Consolas, Menlo, monospace" font-size="21">programmer / builder / product tinkerer</text>
+  <text x="56" y="313" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="17">I build small systems that remove unnecessary friction.</text>
 
-  <text x="684" y="184" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="17">location</text>
-  <text x="835" y="184" fill="#f0f6fc" font-family="Consolas, Menlo, monospace" font-size="17">Tbilisi, Georgia</text>
+  <rect x="760" y="94" width="372" height="220" rx="18" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+  <text x="790" y="129" fill="#58a6ff" font-family="Consolas, Menlo, monospace" font-size="15">RUNTIME</text>
+  <line x1="790" y1="145" x2="1102" y2="145" stroke="#21262d"/>
 
-  <text x="684" y="220" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="17">current</text>
-  <text x="835" y="220" fill="#7ee787" font-family="Consolas, Menlo, monospace" font-size="17">STENA</text>
+  <text x="790" y="180" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="15">base</text>
+  <text x="900" y="180" fill="#f0f6fc" font-family="Consolas, Menlo, monospace" font-size="15">Tbilisi</text>
+  <text x="790" y="214" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="15">mode</text>
+  <text x="900" y="214" fill="#7ee787" font-family="Consolas, Menlo, monospace" font-size="15">BUILDING</text>
+  <text x="790" y="248" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="15">route</text>
+  <text x="900" y="248" fill="#f0f6fc" font-family="Consolas, Menlo, monospace" font-size="15">web / tools / bots</text>
+  <text x="790" y="282" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="15">rule</text>
+  <text x="900" y="282" fill="#58a6ff" font-family="Consolas, Menlo, monospace" font-size="15">signal &gt; noise</text>
 
-  <text x="684" y="256" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="17">stack</text>
-  <text x="835" y="256" fill="#f0f6fc" font-family="Consolas, Menlo, monospace" font-size="17">JavaScript / Python / Web</text>
-
-  <text x="684" y="292" fill="#8b949e" font-family="Consolas, Menlo, monospace" font-size="17">mode</text>
-  <text x="835" y="292" fill="#58a6ff" font-family="Consolas, Menlo, monospace" font-size="17">BUILDING</text>
-
-  <text x="58" y="377" fill="#58a6ff" font-family="Consolas, Menlo, monospace" font-size="18">signal &gt; noise</text>
-  <text x="238" y="377" fill="#30363d" font-family="Consolas, Menlo, monospace" font-size="18">//</text>
-  <text x="280" y="377" fill="#7ee787" font-family="Consolas, Menlo, monospace" font-size="18">less noise. better structure.</text>
-
-  <rect x="1114" y="367" width="12" height="22" fill="#7ee787"/>
+  <text x="56" y="356" fill="#7ee787" font-family="Consolas, Menlo, monospace" font-size="15">[ READY TO BUILD ]</text>
+  <text x="1128" y="356" text-anchor="end" fill="#30363d" font-family="Consolas, Menlo, monospace" font-size="14">akaAnger // 0xA6</text>
 </svg>
