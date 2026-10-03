@@ -44,6 +44,19 @@ No framework worship. No complexity for decoration. The tool comes first.
 <a id="projects"></a>
 ## `PROJECTS / 02`
 
+### `ALICE ANY AI // NEW`
+
+**A familiar voice. Your model.**
+
+Connect a private Yandex Alice skill to a compatible AI API. Browser-based setup, slow-answer polling, session context, and protected credentials on your own server. No speaker firmware changes.
+
+[`OPEN PROJECT →`](https://github.com/akaAnger/akaAnger/tree/main/projects/alice-any-ai) · [`SETUP GUIDE →`](https://github.com/akaAnger/akaAnger/blob/main/projects/alice-any-ai/docs/CLOUD.md)
+
+`Node.js` `AI APIs` `Self-hosted` `No npm dependencies`  
+**v0.1.0 preview:** automated tests included; real-speaker and provider checks still required.
+
+---
+
 <table>
 <tr>
 <td width="50%" valign="top">

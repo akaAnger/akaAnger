@@ -1,0 +1,27 @@
+# Alice Any AI: запуск проекта из репозитория профиля.
+# Starter и постоянный диск платные. Проверьте цену перед Deploy.
+services:
+  - type: web
+    name: alice-any-ai
+    runtime: node
+    repo: https://github.com/akaAnger/akaAnger
+    rootDir: projects/alice-any-ai
+    plan: starter
+    numInstances: 1
+    buildCommand: npm run check && npm test
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    disk:
+      name: alice-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: DATA_DIR
+        value: /var/data/alice-any-ai
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: WEBHOOK_SECRET
+        generateValue: true

@@ -1,0 +1,16 @@
+{
+  "name": "alice-any-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Сторонние языковые модели в приватном навыке Алисы. Настройка через браузер, без npm-зависимостей.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node start.mjs",
+    "setup": "node start.mjs --open --tunnel",
+    "test": "node --test",
+    "check": "node scripts/check.mjs"
+  },
+  "license": "MIT",
+  "author": "akaAnger"
+}

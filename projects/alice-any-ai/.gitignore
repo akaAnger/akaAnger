@@ -1,0 +1,10 @@
+.data/
+.env
+.env.*
+!.env.example
+node_modules/
+*.log
+*.tmp
+.DS_Store
+coverage/
+config.json

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Alice Any AI — настройка</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+<header><span class="mark">A / AI</span><div><p class="eyebrow">akaAnger · самостоятельный хостинг · 0.1.0</p><h1>Знакомый голос.<br>Твоя модель.</h1><p class="intro">Подключи сторонний ИИ к приватному навыку Алисы. Без прошивки колонки и редактирования кода.</p></div></header>
+<main>
+<section id="login"><h2>Вход в панель</h2><p>На компьютере используй личную ссылку из окна запуска. В облаке скопируй <code>ADMIN_TOKEN</code> из переменных окружения сервиса. Это не ключ нейросети.</p><label>Ключ администратора<input id="admin" type="password" autocomplete="off"></label><button id="loginButton">Открыть настройки</button></section>
+<div id="workspace" hidden>
+<section><div class="sectionTitle"><span class="step">01</span><h2>Выбери, кто отвечает</h2></div>
+<label>Сервис<select id="provider"></select></label>
+<div class="row"><label>Ключ API<input id="apiKey" type="password" autocomplete="new-password" placeholder="Вставь ключ из кабинета провайдера"></label><label class="small"><input type="checkbox" id="clearApiKey"> Удалить сохраненный ключ</label></div>
+<p id="keyHint" class="hint"></p><p><a id="providerDocs" target="_blank" rel="noreferrer noopener">Документация выбранного сервиса</a></p>
+<div class="row"><label>Модель<input id="model" list="models" placeholder="Точный идентификатор из кабинета или списка"><datalist id="models"></datalist></label><button id="modelsButton" class="secondary">Загрузить модели</button></div>
+<p class="hint">В списке могут быть не только чат-модели. Выбери текстовую. Если API не поддерживает список моделей, введи имя вручную.</p>
+<details><summary>Адрес и дополнительные настройки</summary><label>Базовый адрес API<input id="baseUrl" type="url" placeholder="https://example.com/v1"></label><label>Формат API<select id="protocol"><option value="chat">OpenAI-совместимый Chat Completions</option><option value="anthropic">Anthropic Messages</option></select></label><div class="row"><label>Параметр лимита токенов<select id="tokenField"><option>max_tokens</option><option>max_completion_tokens</option></select></label><label>Лимит выходных токенов<input id="maxTokens" type="number" min="64" max="8192" step="1"></label></div><label>Дневной лимит запросов сервера<input id="dailyLimit" type="number" min="1" max="10000"></label><p class="hint">Счетчик в памяти, по UTC; перезапуск его обнуляет. Это не денежный лимит. Настрой бюджет отдельно у провайдера.</p><label>Инструкция модели<textarea id="systemPrompt" rows="4"></textarea></label><label>Дополнительные параметры (JSON)<textarea id="extra" rows="2" placeholder='{"reasoning_effort":"low"}'></textarea></label><p class="hint">Необязательно. Поддерживаются temperature, top_p, reasoning_effort, только если их принимает выбранная модель.</p></details>
+<p class="notice">Кнопка проверки отправит выбранному ИИ фразу «Ответь одной короткой фразой: подключение работает». Провайдер может списать оплату за запрос. Подписка на сайт чата не заменяет оплату API.</p><button id="testButton">Проверить связь с ИИ · возможна оплата</button><p id="testResult" role="status"></p>
+</section>
+<section><div class="sectionTitle"><span class="step">02</span><h2>Соедини с Алисой</h2></div><p>Открой <a href="https://dialogs.yandex.ru/developer/" target="_blank" rel="noreferrer noopener">Яндекс Диалоги</a> под аккаунтом Станции. Создай «Навык в Алисе» с приватным доступом. Придумай уникальное название из двух-трех слов без слов «Алиса», «Яндекс», «Станция».</p>
+<label>ID навыка<input id="skillId" placeholder="Диалоги → Общие сведения → Идентификатор навыка"></label>
+<label>Публичный HTTPS-адрес этого сервера<input id="publicUrl" type="url" placeholder="https://your-service.onrender.com"></label><p class="hint">Не адрес нейросети. Для локального запуска нужен работающий туннель. Обычный localhost Алисе недоступен.</p>
+<button id="refreshButton" class="secondary">Обновить адрес</button>
+<details><summary>Ограничить круг пользователей</summary><p>Для первого запуска достаточно приватного навыка и секретного вебхука. Дополнительно можно разрешить конкретные идентификаторы <code>session.user.user_id</code>. Они не совпадают с почтой или логином.</p><label>Разрешенные ID, по одному на строку<textarea id="allowedUserIds" rows="2"></textarea></label><p id="userHint" class="hint"></p></details>
+<button id="saveButton">Сохранить настройки</button><p id="saveResult" role="status"></p>
+</section>
+<section><div class="sectionTitle"><span class="step">03</span><h2>Скопируй адрес и заговори</h2></div><label>Webhook URL для Яндекс Диалогов<input id="webhookUrl" readonly placeholder="Появится после сохранения HTTPS-адреса"></label><button id="copyButton" class="secondary">Скопировать Webhook URL</button><p class="notice">В адресе есть секрет доступа. Не публикуй его в постах, скриншотах и GitHub. Это не API-ключ модели.</p><p>Вставь адрес в поле <strong>Backend → Webhook URL</strong>. Проверь навык во вкладке <strong>Тестирование</strong>, отправь на автомодерацию и опубликуй с приватным доступом. Не включай требование экрана для колонки.</p><div class="speech">«Алиса, запусти навык [твое название]»</div><p>Если ИИ отвечает не сразу: <strong>«Ответ готов?»</strong>. Длинные ответы: <strong>«Дальше»</strong>. Начать без контекста: <strong>«Новая тема»</strong>. Выйти: <strong>«Выход»</strong>.</p>
+</section>
+</div>
+<p id="error" role="alert"></p>
+<footer>Неофициальный проект. Не заменяет Алису целиком и не управляет умным домом. Голос проходит через Яндекс, текст — через этот сервер и выбранного провайдера. Для секретов и паролей не использовать.</footer>
+</main></body></html>

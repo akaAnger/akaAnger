@@ -1,0 +1,60 @@
+name: Alice Any AI
+
+on:
+  push:
+    paths:
+      - 'projects/alice-any-ai/**'
+      - '.github/workflows/alice-any-ai.yml'
+  pull_request:
+    paths:
+      - 'projects/alice-any-ai/**'
+      - '.github/workflows/alice-any-ai.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Node ${{ matrix.node }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['22', '24']
+        os: [ubuntu-latest, windows-latest]
+    defaults:
+      run:
+        working-directory: projects/alice-any-ai
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm run check
+      - run: npm test
+
+  docker:
+    name: Docker build and startup
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t alice-any-ai:test projects/alice-any-ai
+      - name: Verify startup as non-root
+        run: |
+          docker run -d --name alice-test -p 127.0.0.1:8787:8787 alice-any-ai:test
+          for attempt in $(seq 1 15); do
+            if curl --fail --silent http://127.0.0.1:8787/healthz; then
+              test "$(docker exec alice-test id -u)" != "0"
+              exit 0
+            fi
+            sleep 1
+          done
+          docker logs alice-test
+          exit 1
+      - name: Stop test container
+        if: always()
+        run: docker rm -f alice-test || true

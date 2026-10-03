@@ -1,0 +1,25 @@
+# Для самостоятельного репозитория. В репозитории профиля используется его корневой render.yaml.
+# Starter и постоянный диск платные. Проверьте цену перед Deploy.
+services:
+  - type: web
+    name: alice-any-ai
+    runtime: node
+    plan: starter
+    numInstances: 1
+    buildCommand: npm run check && npm test
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    disk:
+      name: alice-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: DATA_DIR
+        value: /var/data/alice-any-ai
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: WEBHOOK_SECRET
+        generateValue: true
